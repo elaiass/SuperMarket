@@ -4,7 +4,7 @@
   box-sizing: border-box;
   text-decoration: none;
   border: none;
-
+  
 }
 
 body {
@@ -35,6 +35,17 @@ body {
 }
 
 
+.carrinhoDeCompras {
+  height: 100vh;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 4px #000000;
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
 
 .arrow-style {
   animation: floatAnimation 2s infinite ease-in-out; /* Aplica a animação de flutuação */
@@ -43,7 +54,6 @@ body {
 
 .arrow-style2 {
   animation: floatAnimation 2s infinite ease-in-out; /* Aplica a animação de flutuação */
-  height: 100vh;
   margin: 0;
 }
 
@@ -62,14 +72,10 @@ body {
 }
 
 
-.conteudo {
 
-  height: 100vh;
-
-}
 
 .produtos {
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -77,8 +83,25 @@ body {
 
 }
 
+.produtos2 {
+  
+  border: 4px solid #ffffff;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 10px;
+} 
 
+.conteudo2 {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 
+.conteudo2 {
+  border-top: 0.4px solid #ffffff;
+}
 
 .arrow {
   width: 0;
@@ -97,9 +120,6 @@ body {
   color: rgb(255, 246, 114)
 }
 
-.conteudo2 {
-  border-top: 0.4px solid #ffffff;
-}
 
 .arrow2 {
   width: 0;
@@ -141,12 +161,75 @@ body {
   font-size: 10px;
 }
 
-.botao_mais {
+.adicionar {
   padding: 0px 5px;
   font-size: 30px;
   color: #ffffff;
-  border: 2px solid #31d655;
   background-color: #31d655;
   cursor: pointer;
   border-radius: 5px;
+}
+
+.adicionar:hover {
+  background-color: #209e3c;
+}
+
+.carrinho {
+  color: #ff0000;
+}
+
+/* Estilo do modal */
+.modal {
+  display: none; /* Inicialmente escondido */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%; /* ou qualquer largura desejada */
+  max-width: 600px; /* limite máximo da largura */
+  max-height: 80%; /* limite máximo da altura */
+  padding: 20px;
+  color: #ffffff;
+  text-shadow: 4px 4px 4px #000000;
+  background-color: rgba(255, 251, 0, 0.041);
+  overflow-y: auto; /* Aqui está a chave para a rolagem */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#fechar-modal {
+  background-color: #dc3545;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#limpar-carrinho {
+  background-color: #ffeeb6;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#limpar-carrinho:hover {
+  background-color: #ffce74;
+}
+
+#fechar-modal:hover {
+  background-color: #c82333;
 }
